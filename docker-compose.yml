@@ -1,0 +1,37 @@
+version: "3.5"
+
+services:
+  wordpress:
+    build: ./wp
+    environment:
+      WORDPRESS_DB_PASSWORD: myrootpwd
+      WORDPRESS_DB_NAME: wp_db
+      WORDPRESS_TABLE_PREFIX: wp_
+      WORDPRESS_DB_HOST: db
+    ports:
+      - "80:80"
+    restart: always
+    depends_on:
+      - db
+    volumes:
+      - ./uploads:/var/www/html/wp-content/uploads
+      - ./plugins:/var/www/html/wp-content/plugins
+      - ./main-theme:/var/www/html/wp-content/themes/main-theme
+
+  db:
+    build: ./db
+    environment:
+      MYSQL_ROOT_PASSWORD: myrootpwd
+      MYSQL_DATABASE: wp_db
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:4.7.8-1
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: myrootpwd
+    ports:
+      - "8081:80"
+    depends_on:
+      - db
