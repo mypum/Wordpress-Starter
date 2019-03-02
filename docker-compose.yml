@@ -16,7 +16,7 @@ services:
     volumes:
       - ./uploads:/var/www/html/wp-content/uploads
       - ./plugins:/var/www/html/wp-content/plugins
-      - ./main-theme:/var/www/html/wp-content/themes/main-theme
+      - ./themes:/var/www/html/wp-content/themes
       - ./phpconf.ini:/usr/local/etc/php/conf.d/phpconf.ini
 
   db:
