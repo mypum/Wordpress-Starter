@@ -1,0 +1,16 @@
+{
+    "eslint.autoFixOnSave": true,
+    "search.exclude": {
+      ".vscode": true,
+      "node_modules": true,
+      "package-lock.json": true,
+    },
+    "files.exclude": {
+      "node_modules": true,
+      "vendor": true,
+      "composer.json": true,
+      "composer.lock": true,
+      "phpcs.xml": true,
+      ".editorconfig": true,
+    }
+}
