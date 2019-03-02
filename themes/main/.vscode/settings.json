@@ -1,5 +1,8 @@
 {
     "eslint.autoFixOnSave": true,
+    "eslint.options": { "configFile": ".eslintrc.json" },
+    "eslint.nodePath": "node_modules",
+    "eslint.validate": [ "javascript", "javascriptreact", "html" ],
     "search.exclude": {
       ".vscode": true,
       "node_modules": true,

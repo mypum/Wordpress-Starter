@@ -13,7 +13,7 @@ import aboutUs from './routes/about';
 /** Populate Router instance with DOM routes */
 const routes = new Router({
   // All pages
-  common,
+   common,
   // Home page
   home,
   // About Us page, note the change from about-us to aboutUs.
