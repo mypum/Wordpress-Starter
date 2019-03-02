@@ -15,5 +15,6 @@
       "composer.lock": true,
       "phpcs.xml": true,
       ".editorconfig": true,
+      ".cache-loader": true,
     }
 }
