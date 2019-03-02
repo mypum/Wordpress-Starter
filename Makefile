@@ -6,6 +6,5 @@ dev:
 stop:
 	docker-compose down
 
-
 snapshot:
-	docker-compose exec db sh -c 'MYSQL_PWD="$$MYSQL_ROOT_PASSWORD" exec mysqldump -uroot $$MYSQL_DATABASE' > ./db/wp_tiewpakklang.sql
+	docker-compose exec db sh -c 'MYSQL_PWD="$$MYSQL_ROOT_PASSWORD" exec mysqldump -uroot $$MYSQL_DATABASE' > ./db/wp_db.sql
