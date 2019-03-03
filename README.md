@@ -7,11 +7,8 @@ If you don't know the container name find it with
 docker ps
 
 Simply run same commands as in example above
-```$ mkdir /var/www/html/wp-content/plugins
-$ mkdir /var/www/html/wp-content/uploads
-$ chown -R www-data:www-data /var/www
-$ find /var/www/ -type d -exec chmod 0755 {} \;
-$ find /var/www/ -type f -exec chmod 644 {} \;
+```
+$ chown -R www-data:www-data /wp-content
 ```
 
 ### Development
